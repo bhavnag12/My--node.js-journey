@@ -8,3 +8,4 @@ const multi = (a,b)=>{
 
 export default multi;         //exporting as default onlt one function is allowed
 
+
