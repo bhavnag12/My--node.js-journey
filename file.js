@@ -153,18 +153,54 @@
 
 
 
-const[, , functionName, value1 ,value2] = process.argv;
 
-//connst functionName = process.agrv[2];
-console.log("functionNme:" , functionName);
-//const value1 = process.argv[3]
-console.log("value1:" , value1);
-//const value2 = process.argv[4];
-console.log("value2:" ,value2);
 
-if(functionName === "add"){
-    console.log("add ", number(value1) + Number(value2));
-}
-if(functionName === "multi"){
-    console.log("add :" , value1 * value2);
-}
+
+
+// const[, , functionName, value1 ,value2] = process.argv;
+
+// //connst functionName = process.agrv[2];
+// console.log("functionNme:" , functionName);
+// //const value1 = process.argv[3]
+// console.log("value1:" , value1);
+// //const value2 = process.argv[4];
+// console.log("value2:" ,value2);
+
+// if(functionName === "add"){
+//     console.log("add ", number(value1) + Number(value2));
+// }
+// if(functionName === "multi"){
+//     console.log("add :" , value1 * value2);
+// }
+
+
+
+
+
+
+
+const https=require("https");
+const server=https.createServer((request,response)=>{
+    const requestUrl = request.url;
+    console.log("~requestUrl:", requestUrl);
+    const requestMethod = request.method;
+    console.log("~requestMethod:",requestMethod);
+    if(requestUrl === "/"){
+        response.end("Hello World!");
+    }
+    if(requestUrl === "/home"){
+        response.end("Home Content");
+    }
+    if(requestUrl === "/about"){
+        response.end("About Content");
+    }
+    // response.end({
+    //     status:1,
+    //     class:"success",
+    //     messgae:"First Server",
+    // })
+    response.end("Home page");
+    
+});
+
+server.listen(3000);

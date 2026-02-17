@@ -4,7 +4,7 @@
   "description": "sample description",
   "license": "ISC",
   "author": "",
-  "type": "module",
+  "type": "commonjs",
   "main": "file.js",
   "scripts": {
     "start": "node file.js",
