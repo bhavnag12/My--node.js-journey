@@ -46,11 +46,11 @@
 // console.log("ended");
 
 
-import os from "os"
+// import os from "os"
 
-//os.platform
+// //os.platform
 
-console.log("os.platform():",os.platform())
+// console.log("os.platform():",os.platform())
 
 
 // const a = () => {
@@ -127,14 +127,44 @@ console.log("os.platform():",os.platform())
 
 // a();
 
-const fetchData = (a,b,cb)=>{
-    cb (`${a+b} Data Initilized`);
-};
+// const fetchData = (a,b,cb)=>{
+//     cb (`${a+b} Data Initilized`);
+// };
 
 
 
 
-const internalFunction = (data) =>{
-    console.log("~ data:",data);
-};
-fetchData(1,2,internalFunction);
+// const internalFunction = (data) =>{
+//     console.log("~ data:",data);
+// };
+// fetchData(1,2,internalFunction);
+
+//URL
+//https:// -> Protocol
+//glauniversity.in -> Domain
+// UploadAttendance.aspx -> Path parm
+// paccess_key = MjAyNi0wMi0xNw==&param2 = value2 -> Query param
+// #key -> Hash
+
+/* <div id = "2" ></div>
+<div id = "3"></div>
+<div id = "someVariable"></div>
+<div id = "4"></div> */
+
+
+
+const[, , functionName, value1 ,value2] = process.argv;
+
+//connst functionName = process.agrv[2];
+console.log("functionNme:" , functionName);
+//const value1 = process.argv[3]
+console.log("value1:" , value1);
+//const value2 = process.argv[4];
+console.log("value2:" ,value2);
+
+if(functionName === "add"){
+    console.log("add ", number(value1) + Number(value2));
+}
+if(functionName === "multi"){
+    console.log("add :" , value1 * value2);
+}
